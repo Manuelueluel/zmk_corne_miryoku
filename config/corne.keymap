@@ -18,6 +18,7 @@
 #define ACCSYM 4        //accsym_layer
 #define NUM 5           //num_layer
 #define FUN 6           //fun_layer
+#define BLRGB 7         //blrgb_layer
 
 // tutti i led trattati come unica stringa led
 &led_strip {
@@ -36,7 +37,18 @@
                 bindings = <&kp>, <&kp>;
                 };
         };
-        
+
+        //To access bluetooth and rgb layer hold ESC + SPC
+        combos {
+                compatible = "zmk,combos";
+                        // two left-most thumb keys => blrgb_layer
+                combo_numpad {  
+                        timeout-ms = <300>;
+                        key-positions = <36 37>;
+                        bindings = <&mo BLRGB>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -135,6 +147,20 @@
    &none &kp F11  &kp F4 &kp F5 &kp F6 &kp SLCK          &trans  &trans   &trans &trans &trans &none
    &none &kp F10  &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK   &trans  &trans   &trans &trans &trans &none
                          &trans &trans &trans            &kp RET &kp BSPC &kp DEL
+                        >;
+                };
+
+                blrgb_layer {
+// -----------------------------------------------------------------------------------------
+// | xxx |     |     |     |     |     |    | RGB_EFF | RGB BRI+ | RGB_HUI | BT_SEL 0 |          | xxx |
+// | xxx |     |     |     |     |     |    | RGB TOG | RGB_BRI- | RGB_HUD | BT_SEL 1 | BT_SEL 4 | xxx |
+// | xxx |     |     |     |     |     |    | RGB_SAI | RGB_SPI  |         | BT_SEL 2 | BT_SEL 5 | xxx |
+//                   |     |     |     |    | RGB_SAD | RGB_SPD  | BTCLR   |         
+                        bindings = <
+   &none &kp F12  &kp F7 &kp F8 &kp F9 &kp PSCRN         &rgb_ug RGB_EFF &rgb_ug RGB_BRI    &rgb_ug RGB_HUI &bt BT_SEL 0 &none        &none
+   &none &kp F11  &kp F4 &kp F5 &kp F6 &kp SLCK          &rgb_ug RGB_TOG &rgb_ug RGB_BRD    &rgb_ug RGB_HUD &bt BT_SEL 1 &bt BT_SEL 3 &none
+   &none &kp F10  &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK   &rgb_ug RGB_SAI &rgb_ug RGB_SPI    &trans          &bt BT_SEL 2 &bt BT_SEL 4 &none
+                         &trans &trans &trans            &rgb_ug RGB_SAD &kp rgb_ug RGB_SPD &bt BT_CLR
                         >;
                 };
 
