@@ -47,12 +47,13 @@
 // | xxx |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | xxx |
 //                   | ESC | SPC | TAB |   | ENT | BSPC | DEL |
                         bindings = <
-   &none &kp Q      &kp W      &kp E       &kp R       &kp T        &kp Y &kp U       &kp I       &kp O      &kp P         &none
-   &none &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G        &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm LGUI SEMI &none
-   &none &kp Z      &kp X      &kp C       &kp V       &kp B        &kp N &kp M       &kp COMMA   &kp DOT    &kp IT_MINUS  &none
-                               &mt MED ESC &mt NAV SPC &mt SYM TAB  &mt ACCSYM RET    &mt NUM BSPC    &kp DEL
+   &none &kp Q      &kp W      &kp E       &kp R       &kp T        &kp Y &kp U       &kp I        &kp O      &kp P         &none
+   &none &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G        &kp H &hm RSHFT J &hm RCTRL K  &hm RALT L &hm LGUI SEMI &none
+   &none &kp Z      &kp X      &kp C       &kp V       &kp B        &kp N &kp M       &kp COMMA    &kp DOT    &kp IT_MINUS  &none
+                               &mt MED ESC &mt NAV SPC &mt SYM TAB  &mt ACCSYM RET    &mt NUM BSPC &mt FUN DEL
                         >;
                 };
+
                 med_layer {
 // -----------------------------------------------------------------------------------------
 // | xxx |     |     |     |     |     |    | BT1    | BT2    | BT3      | BT4      | BT5  | xxx |
@@ -123,26 +124,19 @@
                         >;
                 };
 
+                fun_layer {
+// -----------------------------------------------------------------------------------------
+// | xxx | F12 | F7  | F8  | F9  | PrtScr      |    |     |     |     |     |     | xxx |
+// | xxx | F11 | F4  | F5  | F6  | Scrl lck    |    |     |     |     |     |     | xxx |
+// | xxx | F10 | F1  | F2  | F3  | Pause/Break |    |     |     |     |     |     | xxx |
+//                   |     |     |             |    | ENT | BSPC | DEL  |         
+                        bindings = <
+   &none &kp F12  &kp F7 &kp F8 &kp F9 &kp PSCRN         &trans  &trans   &trans &trans &trans &none
+   &none &kp F11  &kp F4 &kp F5 &kp F6 &kp SLCK          &trans  &trans   &trans &trans &trans &none
+   &none &kp F10  &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK   &trans  &trans   &trans &trans &trans &none
+                         &trans &trans &trans            &kp RET &kp BSPC &kp DEL
+                        >;
+                };
+
         };
 };
-
-
-
-
-
-
-//               nav_layer {
-// -----------------------------------------------------------------------------------------
-// | xxx |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | xxx |
-// | xxx |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  | xxx |
-// | xxx |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" | xxx |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-//                        bindings = <
-//   &none &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &none
-//   &none &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &none
-//   &none &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &none
-//                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-//                        >;
-//                };
-//        };
-//};
