@@ -50,7 +50,7 @@
    &none &kp Q      &kp W      &kp E       &kp R       &kp T       &kp Y &kp U       &kp I       &kp O      &kp P         &none
    &none &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G       &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm LGUI SEMI &none
    &none &kp Z      &kp X      &kp C       &kp V       &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp IT_MINUS  &none
-                               &mt 1 ESC   &mt 2 SPC   &mt 3 TAB   &mt 4 RET         &mt 5 BSPC  &kp 6 DEL
+                               &kp ESC   &kp SPC   &kp TAB   &kp RET         &kp BSPC  &kp DEL
                         >;
                 };
                 med_layer {
