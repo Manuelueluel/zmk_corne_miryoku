@@ -11,12 +11,13 @@
 #include "keymap_italian.h"
 
 // Layer definitions
-#define BASE 0  //base_layer
-#define MED 1   //med_layer
-#define NAV 2   //nav_layer
-#define SYM 3   //sym_layer 
-#define NUM 4   //num_layer
-#define FUN 5   //fun_layer
+#define BASE 0          //base_layer
+#define MED 1           //med_layer
+#define NAV 2           //nav_layer
+#define SYM 3           //sym_layer 
+#define ACCSYM 4        //accsym_layer
+#define NUM 5           //num_layer
+#define FUN 6           //fun_layer
 
 // tutti i led trattati come unica stringa led
 &led_strip {
@@ -46,10 +47,10 @@
 // | xxx |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | xxx |
 //                   | ESC | SPC | TAB |   | ENT | BSPC | DEL |
                         bindings = <
-   &none &kp Q      &kp W      &kp E       &kp R       &kp T       &kp Y &kp U       &kp I       &kp O      &kp P         &none
-   &none &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G       &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm LGUI SEMI &none
-   &none &kp Z      &kp X      &kp C       &kp V       &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp IT_MINUS  &none
-                               &mt MED ESC &mt NAV SPC &mt SYM TAB   &kp RET         &kp BSPC  &kp DEL
+   &none &kp Q      &kp W      &kp E       &kp R       &kp T        &kp Y &kp U       &kp I       &kp O      &kp P         &none
+   &none &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G        &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm LGUI SEMI &none
+   &none &kp Z      &kp X      &kp C       &kp V       &kp B        &kp N &kp M       &kp COMMA   &kp DOT    &kp IT_MINUS  &none
+                               &mt MED ESC &mt NAV SPC &mt SYM TAB  &kp RET         &kp BSPC    &kp DEL
                         >;
                 };
                 med_layer {
@@ -69,7 +70,7 @@
                 nav_layer {
 // -----------------------------------------------------------------------------------------
 // | xxx |     |     |     |     |     |   | Copy   | Paste |  UP   | Redo  | Undo | xxx |
-// | xxx |     |     |     |     |     |   |        | LEFT  | DOWN  | RIGHT |      | xxx |
+// | xxx |     |     |     |     |     |   | Caps   | LEFT  | DOWN  | RIGHT |      | xxx |
 // | xxx |     |     |     |     |     |   | Insert | Home  | Pg Dn | Pg Up | End  | xxx |
 //                   | ESC | SPC | TAB |   | ENT    | BSPC  | DEL   |
                         bindings = <
@@ -82,40 +83,27 @@
 
                 sym_layer {
 // -----------------------------------------------------------------------------------------
-// | xxx |     |     |     |     |     |    |  &  |  /  |  (  |  )  |  =  | xxx |
-// | xxx |     |     |     |     |     |    |  |  |  ?  |  [  |  ]  |  \  | xxx |
-// | xxx |     |     |     |     |     |    |  ^  |  '  |  {  |  }  |  °  | xxx |
-//                   | ESC | SPC | TAB |    | ENT | BSPC | DEL  |
+// | xxx |     |     |     |     |     |    |  &  |  (  |  )  |  =  |  ?  | xxx |
+// | xxx |     |     |     |     |     |    |  |  |  [  |  ]  |  /  |  \  | xxx |
+// | xxx |     |     |     |     |     |    |  ^  |  {  |  }  |  °  |  ~  | xxx |
+//                   | ESC | SPC | TAB |    | ENT | BSPC | DEL  |         
                         bindings = <
-   &none &trans &trans &trans   &trans &trans     &kp LC(C)  &kp LC(V) &kp UP     &kp LC(Y) &kp LC(Z) &none
-   &none &trans &trans &trans   &trans &trans     &kp CAPS   &kp LEFT  &kp DOWN   &kp RIGHT &kp BSLH  &none
-   &none &trans &trans &trans   &trans &trans     &kp INSERT &kp HOME  &kp PG_DN  &kp PG_UP &kp END   &none
-                       &kp LGUI &trans &kp SPACE  &kp RET    &kp BSPC  &kp DEL
+   &none &trans &trans &trans   &trans &trans     &kp IT_AND   &kp IT_LPAR &kp IT_RPAR &kp IT_EQL &kp IT_QUES  &none
+   &none &trans &trans &trans   &trans &trans     &kp IT_PIPE  &kp IT_LBKT &kp IT_RBKT &kp IT_FSLH &kp IT_BSLH &none
+   &none &trans &trans &trans   &trans &trans     &kp IT_CARET &kp IT_LBRC &kp IT_RBRC &kp IT_DEG &kp IT_TILDE &none
+                       &kp LGUI &trans &kp SPACE  &kp RET      &kp BSPC    &kp DEL
                         >;
                 };
 
-|  &  |  /  |  (  |  )  |  =  | xxx |
-|  |  |  ?  |  [  |  ]  |  \  | xxx |
-|  ^  |  '  |  {  |  }  |  °  | xxx |
-| ENT | BSPC | DEL  |
-
-|  &  |  (  |  )  |  =  |  ?  | xxx |
-|  |  |  [  |  ]  |  \  |  /  | xxx |
-|  ^  |  {  |  }  |  °  |  ~  | xxx |
-| ENT | BSPC | DEL  |
-
-
-| xxx |  !  |  "  |  £  |  $  |  %  |
-| xxx |  ì  |  é  |  è  |  ù  |  à  |
-| xxx |  <  |  >  |     |     |  ò  |
-                  | ESC | SPC | TAB |
 
 
         };
 };
 
-
-
+//| xxx |  !  |  "  |  £  |  $  |  %  |
+//| xxx |  ì  |  é  |  è  |  ù  |  à  |
+//| xxx |  <  |  >  |     |     |  ò  |
+//                  | ESC | SPC | TAB |
 
 //               nav_layer {
 // -----------------------------------------------------------------------------------------
