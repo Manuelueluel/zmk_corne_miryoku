@@ -69,15 +69,15 @@
 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// | xxx |     |     |     |     |     |   |  ^  |  &  |  *  |  (  |  )  | xxx |
-// | xxx |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  | xxx |
-// | xxx |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" | xxx |
-//                   | GUI |     | SPC |   | ENT |     | ALT |
+// | xxx |     |     |     |     |     |   | Copy | Paste |  UP  | Redo  | Undo | xxx |
+// | xxx |     |     |     |     |     |   |      | LEFT  | DOWN | RIGHT |      | xxx |
+// | xxx |     |     |     |     |     |   |      |       |      |       |      | xxx |
+//                   | ESC | SPC | TAB |   | ENT  | BSPC  | DEL  |
                         bindings = <
-   &none &trans   &trans &trans   &trans   &trans   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &none
-   &none &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &none
-   &none &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &none
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &none &trans &trans &trans   &trans &trans     &kp LC(C)  &kp LC(V) &kp UP     &kp LC(Y) &kp LC(Z) &none
+   &none &trans &trans &trans   &trans &trans     &kp CAPS   &kp LEFT  &kp DOWN   &kp RIGHT &kp BSLH  &none
+   &none &trans &trans &trans   &trans &trans     &kp INSERT &kp HOME  &kp PG_DN  &kp PG_UP &kp END   &none
+                       &kp LGUI &trans &kp SPACE  &kp RET    &kp BSPC  &kp DEL
                         >;
                 };
         };
