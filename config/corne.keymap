@@ -50,7 +50,7 @@
    &none &kp Q      &kp W      &kp E       &kp R       &kp T       &kp Y &kp U       &kp I       &kp O      &kp P         &none
    &none &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G       &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm LGUI SEMI &none
    &none &kp Z      &kp X      &kp C       &kp V       &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp IT_MINUS  &none
-                               &mt MED ESC   &kp SPC   &kp TAB   &kp RET         &kp BSPC  &kp DEL
+                               &mt MED ESC   &mt NAV SPC   &kp TAB   &kp RET         &kp BSPC  &kp DEL
                         >;
                 };
                 med_layer {
@@ -69,10 +69,10 @@
 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// | xxx |     |     |     |     |     |   | Copy | Paste |  UP  | Redo  | Undo | xxx |
-// | xxx |     |     |     |     |     |   |      | LEFT  | DOWN | RIGHT |      | xxx |
-// | xxx |     |     |     |     |     |   |      |       |      |       |      | xxx |
-//                   | ESC | SPC | TAB |   | ENT  | BSPC  | DEL  |
+// | xxx |     |     |     |     |     |   | Copy   | Paste |  UP   | Redo  | Undo | xxx |
+// | xxx |     |     |     |     |     |   |        | LEFT  | DOWN  | RIGHT |      | xxx |
+// | xxx |     |     |     |     |     |   | Insert | Home  | Pg Dn | Pg Up | End  | xxx |
+//                   | ESC | SPC | TAB |   | ENT    | BSPC  | DEL   |
                         bindings = <
    &none &trans &trans &trans   &trans &trans     &kp LC(C)  &kp LC(V) &kp UP     &kp LC(Y) &kp LC(Z) &none
    &none &trans &trans &trans   &trans &trans     &kp CAPS   &kp LEFT  &kp DOWN   &kp RIGHT &kp BSLH  &none
@@ -80,6 +80,14 @@
                        &kp LGUI &trans &kp SPACE  &kp RET    &kp BSPC  &kp DEL
                         >;
                 };
+
+
+
+
+
+
+
+
         };
 };
 
