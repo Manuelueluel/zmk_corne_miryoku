@@ -96,14 +96,14 @@
 
                 sym_layer {
 // -----------------------------------------------------------------------------------------
-// | xxx |     |     |     |     |     |    |  &  |  (  |  )  |  =  |  ?  | xxx |
-// | xxx |     |     |     |     |     |    |  |  |  [  |  ]  |  /  |  \  | xxx |
-// | xxx |     |     |     |     |     |    |  ^  |  {  |  }  |  °  |  ~  | xxx |
+// | xxx |     |     |     |     |     |    |  &  |  (   |  )   |  =  |  ?  | xxx |
+// | xxx |     |     |     |     |     |    |  |  |  [   |  ]   |  /  |  \  | xxx |
+// | xxx |     |     |     |     |     |    |  ^  |  {   |  }   |  @  |  #  | xxx |
 //                   | ESC | SPC | TAB |    | ENT | BSPC | DEL  |         
                         bindings = <
    &none &trans &trans &trans   &trans  &trans     &kp IT_AND   &kp IT_LPAR &kp IT_RPAR &kp IT_EQL &kp IT_QUES  &none
    &none &trans &trans &trans   &trans  &trans     &kp IT_PIPE  &kp IT_LBKT &kp IT_RBKT &kp IT_FSLH &kp IT_BSLH &none
-   &none &trans &trans &trans   &trans  &trans     &kp IT_CARET &kp IT_LBRC &kp IT_RBRC &kp IT_DEG &kp IT_TILDE &none
+   &none &trans &trans &trans   &trans  &trans     &kp IT_CARET &kp IT_LBRC &kp IT_RBRC &kp IT_AT &kp IT_HASH &none
                        &kp LGUI &kp SPC &kp TAB    &kp RET      &kp BSPC    &kp DEL
                         >;
                 };
@@ -112,13 +112,13 @@
 // -----------------------------------------------------------------------------------------
 // | xxx |  !  | ` " |  £  |  $  |  %  |    |     |     |     |     |     | xxx |
 // | xxx |  ì  |  é  |  è  |  ù  |  à  |    |     |     |     |     |     | xxx |
-// | xxx |  <  |  >  |     |     |  ò  |    |     |     |     |     |     | xxx |
+// | xxx |  <  |  >  |  °  |  ~  |  ò  |    |     |     |     |     |     | xxx |
 //                   | ESC | SPC | TAB |    | ENT | BSPC | DEL  |         
                         bindings = <
-   &none &kp EXCL    &mt IT_BKTK IT_DQUOT &kp IT_PND  &kp DLLR    &kp PRCNT      &trans  &trans   &trans &trans &trans &none
-   &none &kp IT_IGRV &kp IT_EACU          &kp IT_EGRV &kp IT_UGRV &kp IT_AGRV    &trans  &trans   &trans &trans &trans &none
-   &none &kp IT_LESS &kp IT_GREAT         &trans      &trans      &kp IT_OGRV    &trans  &trans   &trans &trans &trans &none
-                                          &kp LGUI    &kp SPC     &kp TAB        &kp RET &kp BSPC &kp DEL
+   &none &kp EXCL    &mt IT_BKTK IT_DQUOT &kp IT_PND  &kp DLLR     &kp PRCNT   &trans  &trans   &trans &trans &trans &none
+   &none &kp IT_IGRV &kp IT_EACU          &kp IT_EGRV &kp IT_UGRV  &kp IT_AGRV &trans  &trans   &trans &trans &trans &none
+   &none &kp IT_LESS &kp IT_GREAT         &kp IT_DEG  &kp IT_TILDE &kp IT_OGRV &trans  &trans   &trans &trans &trans &none
+                                          &kp LGUI    &kp SPC      &kp TAB     &kp RET &kp BSPC &kp DEL
                         >;
                 };
 
