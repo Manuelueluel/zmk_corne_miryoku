@@ -88,7 +88,7 @@
 //                   | ESC | SPC | TAB |   | ENT    | BSPC  | DEL   |
                         bindings = <
    &none &trans &trans &trans   &trans &trans     &kp LC(C)  &kp LC(V) &kp UP     &kp LC(Y) &kp LC(Z) &none
-   &none &trans &trans &trans   &trans &trans     &kp CAPS   &kp LEFT  &kp DOWN   &kp RIGHT &kp K_CUT  &none
+   &none &trans &trans &trans   &trans &trans     &kp CAPS   &kp LEFT  &kp DOWN   &kp RIGHT &kp LC(X)  &none
    &none &trans &trans &trans   &trans &trans     &kp INSERT &kp HOME  &kp PG_DN  &kp PG_UP &kp END   &none
                        &kp LGUI &trans &kp SPACE  &kp RET    &kp BSPC  &kp DEL
                         >;
