@@ -83,13 +83,13 @@
                 nav_layer {
 // -----------------------------------------------------------------------------------------
 // | xxx |     |     |      |       |     |   | Copy   | Paste |  UP   | Redo  | Undo | xxx |
-// | xxx |     |     | Copy | Paste |     |   | Caps   | LEFT  | DOWN  | RIGHT | Cut  | xxx |
-// | xxx |     |     |      |       |     |   | Insert | Home  | Pg Dn | Pg Up | End  | xxx |
+// | xxx |     |     |      |       |     |   | Caps   | LEFT  | DOWN  | RIGHT | Cut  | xxx |
+// | xxx |     |     | Copy | Paste |     |   | Insert | Home  | Pg Dn | Pg Up | End  | xxx |
 //                   | ESC  |       | SPC |   | ENT    | BSPC  | DEL   |
                         bindings = <
    &none &trans &trans &trans    &trans    &trans     &kp LC(C)  &kp LC(V) &kp UP     &kp LC(Y) &kp LC(Z) &none
-   &none &trans &trans &kp LC(C) &kp LC(V) &trans     &kp CAPS   &kp LEFT  &kp DOWN   &kp RIGHT &kp LC(X)  &none
-   &none &trans &trans &trans    &trans    &trans     &kp INSERT &kp HOME  &kp PG_DN  &kp PG_UP &kp END   &none
+   &none &trans &trans &trans    &trans    &trans     &kp CAPS   &kp LEFT  &kp DOWN   &kp RIGHT &kp LC(X)  &none
+   &none &trans &trans &kp LC(C) &kp LC(V) &trans     &kp INSERT &kp HOME  &kp PG_DN  &kp PG_UP &kp END   &none
                        &kp LGUI  &trans    &kp SPACE  &kp RET    &kp BSPC  &kp DEL
                         >;
                 };
